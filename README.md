@@ -26,14 +26,15 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-1. Creamos el proyecto con ng new ng14dot6
-2. Aceptamos el routing y el CSS
-3. Limpiamos el app.c.html
-4. Agregamos el CSS y JS de Bootstrap
-5. Agregamos un header de Bootstrap
-6. Creamos un componente llamado employess-list
-7. Creamos una interfaz tipo model para Employee
-  7.1 Para probar hacemos un listado de employees
+### Pasos
+*1. Creamos el proyecto con ng new ng14dot6
+*2. Aceptamos el routing y el CSS
+*3. Limpiamos el app.c.html
+*4. Agregamos el CSS y JS de Bootstrap
+*5. Agregamos un header de Bootstrap
+*6. Creamos un componente llamado employess-list
+*7. Creamos una interfaz tipo model para Employee
+    *7.1 Para probar hacemos un listado de employees
 
 
 

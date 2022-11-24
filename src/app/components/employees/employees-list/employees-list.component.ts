@@ -34,7 +34,7 @@ export class EmployeesListComponent implements OnInit {
       department: 'IT'
     },
   ];
-  constructor() { } 
+  constructor() { }
 
   ngOnInit() {
     this.employees.push();

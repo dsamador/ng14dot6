@@ -25,8 +25,8 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-### Pasos
+- - -
+### Pasos frontend
 * 1. Creamos el proyecto con ng new ng14dot6
 * 2. Aceptamos el routing y el CSS
 * 3. Limpiamos el app.c.html
@@ -36,5 +36,13 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * 7. Creamos una interfaz tipo model para Employee
     * 7.1 Para probar hacemos un listado de employees
 
+###Pasos backend
+* 1. Crear proyecto webapi con net6
+* 2. Crear el modelo dentro de una carpeta llamada models
+* 3. Hacer la cadena de conexion
+* 4. Agregar la conexion al Program.cs
+* 5. Add-Migration "Initial Migration" en el P M console
+* 6. Update-Database en el P M console
+* 7. Hacer el controlador 
 
 

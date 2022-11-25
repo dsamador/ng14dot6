@@ -43,6 +43,9 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 * 4. Agregar la conexion al Program.cs
 * 5. Add-Migration "Initial Migration" en el P M console
 * 6. Update-Database en el P M console
-* 7. Hacer el controlador 
+* 7. Hacer el controlador
+* 8. Configurar CORS
+* 9. Crear el servicio que consuma la api GET
+* 10. Consumir el servicio Angular
 
 

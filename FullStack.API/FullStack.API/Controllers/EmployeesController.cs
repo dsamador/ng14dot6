@@ -33,5 +33,34 @@ namespace FullStack.API.Controllers
 
       return Ok(employeeRequest);
     }
+
+    [HttpGet]
+    [Route("{id:Guid}")]
+    public async Task<IActionResult> GetEmployee([FromRoute] Guid id)
+    {
+      var employee = await db.Employees.FirstOrDefaultAsync(x => x.Id == id);
+      if(employee == null)
+      {
+        return NotFound();
+      }
+      return Ok(employee);
+    }
+
+    [HttpPut]
+    public async Task<IActionResult> UpdateEmployee([FromBody] Guid id, Employee updateEmployeeRequest)
+    {
+      var employee = await db.Employees.FindAsync(id);
+
+      if(employee == null)      
+        return NotFound();
+
+      employee.Name= updateEmployeeRequest.Name;
+      employee.Email= updateEmployeeRequest.Email;
+      employee.Phone= updateEmployeeRequest.Phone;
+      employee.Salary= updateEmployeeRequest.Salary;
+      employee.Department= updateEmployeeRequest.Department;
+      await db.SaveChangesAsync();
+      return Ok(employee);
+    }
   }
 }

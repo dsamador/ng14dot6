@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Employee } from 'src/app/models/employee.model';
 import { EmployeesService } from 'src/services/employees.service';
 
@@ -11,6 +11,7 @@ import { EmployeesService } from 'src/services/employees.service';
 export class EditEmployeeComponent implements OnInit {
 
   employeeDetails: Employee = {
+    id:'',
     name: '',
     email: '',
     phone: 0,
@@ -18,7 +19,8 @@ export class EditEmployeeComponent implements OnInit {
     department: ''
   }
 
-  constructor(private route: ActivatedRoute, private employeeService: EmployeesService) { }
+  constructor(private route: ActivatedRoute, private employeeService: EmployeesService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe({
@@ -37,7 +39,18 @@ export class EditEmployeeComponent implements OnInit {
   }
 
   updateEmployee(){
-
+    this.employeeService.updateEmployee(this.employeeDetails.id, this.employeeDetails)
+      .subscribe({
+        next: (response)=>{
+          this.router.navigate(['employees']);
+        }
+      });
+  }
+  deleteEmployee(id: string){
+    this.employeeService.deleteEmployee(id)
+      .subscribe({
+        next: ()=> this.router.navigate(['employees'])
+      })
   }
 
 }

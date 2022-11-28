@@ -11,6 +11,7 @@ import { EmployeesService } from 'src/services/employees.service';
 export class AddEmployeeComponent implements OnInit {
 
   addEmployeeRequest: Employee ={
+    id: '',
     name: '',
     email: '',
     phone: 0,
@@ -32,4 +33,7 @@ export class AddEmployeeComponent implements OnInit {
       });
   }
 
+  
+
 }
+
